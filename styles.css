@@ -1,0 +1,82 @@
+:root{
+    --header-color: pink;
+    --paragraph-color-pink: ;
+    --paragraph-color-white: white ;
+    --background-color: #333;
+}
+body{
+    background-color: var(--background-color);
+}
+header{
+    text-align: center;
+    margin-bottom: 40px
+}
+header h1{
+    color: var(--header-color)
+}
+header h1 span::before{
+    content: "\a";
+    white-space: pre;
+}
+header p{
+    color: var(--paragraph-color-white);
+    max-width: 60%;
+    margin: 0 auto;
+}
+main{
+    display: flex;
+    flex-flow: row wrap;
+}
+.cheatsheet-card{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 95%;
+    border: dashed pink;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 40px
+}
+.cheatsheet-card h1{
+    background-color: var(--background-color);
+    padding-left: 10px;
+    color: pink;
+    border: solid white 2px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    bottom: 20px;
+
+}
+.cheatsheet-card p{
+    color: var(--paragraph-color-white);
+    margin: 0;
+    width: 100%;
+    padding-left: 10px
+}
+.cheatsheet-card pre{
+    width:100%;
+    margin: 0 10px;
+    padding: 10px ;
+    box-sizing: border-box;
+    color: white;
+    background-color: pink;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+@media (min-width: 768px){
+    .cheatsheet-card{
+        width: 45%
+    }
+}
+@media (min-width: 992px){
+    .cheatsheet-card{
+        width: 32.5%
+    }
+    main{
+        margin: auto;
+        max-width: 1500px;
+    }
+}
